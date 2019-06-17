@@ -1,14 +1,19 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="container">
+      <h1>Hi</h1>
+      <p>Welcome to</p>
+      <p id="birth">The Birthday Card</p>
+  </div>
+
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <ion-item>
+      <ion-label floating >who will it be from</ion-label>
+      <ion-input type="text" ngModel name="name" ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating >sending it to...</ion-label>
+        <ion-input type="text" ngModel name="receiver" ></ion-input>
+      </ion-item>
+    <button ion-button clear full large>next</button>
+  </form>
 </ion-content>
